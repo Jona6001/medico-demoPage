@@ -1,11 +1,27 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
 export default function Home() {
+  const servicios = [
+    { icon: "fas fa-heart", titulo: "Cardiología", descripcion: "Especialistas en el cuidado del corazón y sistema cardiovascular." },
+    { icon: "fas fa-brain", titulo: "Neurología", descripcion: "Diagnóstico y tratamiento de enfermedades del sistema nervioso." },
+    { icon: "fas fa-baby", titulo: "Pediatría", descripcion: "Cuidado especializado para la salud de sus hijos." },
+    { icon: "fas fa-bone", titulo: "Ortopedia", descripcion: "Tratamiento de lesiones y enfermedades del sistema musculoesquelético." },
+    { icon: "fas fa-eye", titulo: "Oftalmología", descripcion: "Cuidado integral de la visión y salud ocular." },
+    { icon: "fas fa-tooth", titulo: "Odontología", descripcion: "Servicios dentales completos para toda la familia." },
+  ];
+
+  const doctores = [
+    { nombre: "Dra. Ana López", especialidad: "Medicina Familiar", bio: "15 años de experiencia en prevención y seguimiento integral." },
+    { nombre: "Dr. Carlos Méndez", especialidad: "Cardiología", bio: "Enfoque en diagnóstico temprano y control de riesgo cardiovascular." },
+    { nombre: "Dra. Sofía Ruiz", especialidad: "Pediatría", bio: "Atención cercana para el crecimiento y desarrollo saludable de niños." },
+  ];
+
+  const testimonios = [
+    { nombre: "María G.", texto: "La atención fue rápida, humana y muy profesional. Me sentí acompañada en todo momento.", detalle: "Paciente de medicina familiar" },
+    { nombre: "José R.", texto: "Excelente equipo médico y muy buenas instalaciones. Recomiendo totalmente la clínica.", detalle: "Paciente de cardiología" },
+    { nombre: "Laura P.", texto: "El proceso para agendar cita fue sencillo y el trato de todo el personal fue increíble.", detalle: "Paciente de pediatría" },
+  ];
+
   return (
     <>
-      <Navbar />
-      {/* Hero Section */}
       <section id="inicio" className="hero-section">
         <picture className="hero-bg">
           <source media="(min-width: 768px)" srcSet="/images/hero_desktop.webp" type="image/webp" />
@@ -13,55 +29,60 @@ export default function Home() {
         </picture>
         <div className="hero-container">
           <div className="hero-content">
-            <h1>Atención Médica para tu familia</h1>
-            <p>La salud y el bienestar de nuestros pacientes y su equipo de atención médica siempre serán nuestra prioridad, por lo que seguimos las mejores prácticas de limpieza.</p>
+            <h1>Atención médica confiable para toda tu familia</h1>
+            <p>
+              Combinamos experiencia clínica, tecnología y trato humano para que tú y los tuyos reciban
+              atención de calidad en cada consulta.
+            </p>
             <div className="features">
               <div className="feature">
-                <i className="fas fa-stethoscope"></i>
-                <span>Exámenes</span>
+                <i className="fas fa-stethoscope icon"></i>
+                <span>Chequeos</span>
               </div>
               <div className="feature">
-                <i className="fas fa-prescription-bottle-alt"></i>
+                <i className="fas fa-pills icon"></i>
                 <span>Recetas</span>
               </div>
               <div className="feature">
-                <i className="fas fa-heartbeat"></i>
-                <span>Cardiología</span>
+                <i className="fas fa-user-md icon"></i>
+                <span>Especialistas</span>
               </div>
+            </div>
+            <div className="hero-actions">
+              <a href="#contacto" className="btn-primary">Agendar cita</a>
+              <a href="#servicios" className="btn-secondary">Ver servicios</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cards Section */}
       <section className="cards-section">
         <div className="container">
           <div className="cards-container">
             <div className="card card-1">
               <i className="fas fa-ambulance card-icon"></i>
               <h3>Casos de Emergencia</h3>
-              <p>No dude en contactar a nuestro personal de recepción en cualquier momento.</p>
+              <p>Atención inmediata y derivación segura cuando cada minuto cuenta.</p>
             </div>
             <div className="card card-2">
-              <i className="fas fa-user-md card-icon"></i>
-              <h3>Horario de Doctores</h3>
-              <p>Médicos calificados disponibles las 24 horas, consulte nuestro horario.</p>
+              <i className="fas fa-user-doctor card-icon"></i>
+              <h3>Doctores disponibles</h3>
+              <p>Equipo médico calificado en consulta general y especialidades clave.</p>
             </div>
             <div className="card card-3">
               <i className="fas fa-clock card-icon"></i>
               <h3>Horario de Atención</h3>
-              <p>Lunes - Viernes 8:00 - 19:00 hrs</p>
+              <p>Lunes a Viernes de 8:00 a 19:00 hrs y sábados con cita previa.</p>
             </div>
             <div className="card card-4">
               <i className="fas fa-map-marker-alt card-icon"></i>
-              <h3>Ubicación y Direcciones</h3>
-              <p>2507 Beverley Rd Brooklyn, Nueva York 11794 Estados Unidos.</p>
+              <h3>Ubicación</h3>
+              <p>2507 Beverley Rd, Brooklyn, Nueva York 11794, Estados Unidos.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
       <section id="nosotros" className="about-section">
         <div className="container">
           <div className="about-content">
@@ -70,144 +91,140 @@ export default function Home() {
             </div>
             <div className="about-text">
               <h2>Sobre Nuestra Clínica</h2>
-              <p>Somos un centro médico comprometido con brindar la más alta calidad en atención médica para toda la familia. Con más de 15 años de experiencia, nuestro equipo de profesionales altamente calificados está dedicado a su bienestar.</p>
-              <p>Nuestra misión es proporcionar atención compasiva y personalizada utilizando tecnología médica de vanguardia en un ambiente cálido y acogedor.</p>
+              <p>
+                Somos un centro médico comprometido con brindar atención integral y personalizada.
+                Nuestro enfoque une prevención, diagnóstico oportuno y tratamiento efectivo.
+              </p>
               <div className="about-features">
                 <div className="about-feature">
-                  <i className="fas fa-user-md"></i>
+                  <i className="fas fa-user-doctor icon"></i>
                   <div>
                     <h4>Equipo Profesional</h4>
-                    <p>Personal médico altamente calificado y experimentado.</p>
+                    <p>Personal médico altamente calificado y con trato cercano.</p>
                   </div>
                 </div>
                 <div className="about-feature">
-                  <i className="fas fa-hospital"></i>
+                  <i className="fas fa-hospital icon"></i>
                   <div>
                     <h4>Instalaciones Modernas</h4>
-                    <p>Equipamiento médico de última generación.</p>
+                    <p>Espacios cómodos y equipamiento actualizado para tu seguridad.</p>
                   </div>
                 </div>
                 <div className="about-feature">
-                  <i className="fas fa-heart"></i>
+                  <i className="fas fa-heart icon"></i>
                   <div>
                     <h4>Atención Personalizada</h4>
-                    <p>Tratamiento adaptado a las necesidades de cada paciente.</p>
+                    <p>Tratamientos adaptados a cada etapa de la vida.</p>
                   </div>
                 </div>
                 <div className="about-feature">
-                  <i className="fas fa-shield-alt"></i>
+                  <i className="fas fa-shield-alt icon"></i>
                   <div>
                     <h4>Seguridad y Confianza</h4>
-                    <p>Protocolos estrictos de higiene y seguridad.</p>
+                    <p>Protocolos claros de higiene, control y seguimiento clínico.</p>
                   </div>
                 </div>
               </div>
-              <a href="#contacto" className="btn-primary">Conoce Más Sobre Nosotros</a>
+              <a href="#contacto" className="btn-primary">Conoce más sobre nosotros</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Doctors Section */}
       <section id="doctores" className="doctors-section">
         <div className="container">
           <div className="section-header">
             <h2>Nuestros Doctores Especialistas</h2>
-            <p>Contamos con un equipo de profesionales altamente calificados</p>
+            <p>Profesionales comprometidos con una atención clara, humana y efectiva.</p>
           </div>
           <div className="doctors-container">
-            {/* Aquí puedes mapear doctores desde un array o API */}
+            {doctores.map((doctor) => (
+              <article key={doctor.nombre} className="doctor-card">
+                <div className="doctor-info">
+                  <p className="doctor-specialty">{doctor.especialidad}</p>
+                  <h3>{doctor.nombre}</h3>
+                  <p className="doctor-bio">{doctor.bio}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="servicios" className="services-section">
         <div className="container">
           <div className="section-header">
             <h2>Nuestros Servicios Médicos</h2>
-            <p>Ofrecemos una amplia gama de servicios para cuidar de su salud</p>
+            <p>Una oferta integral para prevenir, diagnosticar y tratar a tiempo.</p>
           </div>
           <div className="services-grid">
-            <div className="service-card">
-              <i className="fas fa-heart"></i>
-              <h3>Cardiología</h3>
-              <p>Especialistas en el cuidado del corazón y sistema cardiovascular.</p>
-            </div>
-            <div className="service-card">
-              <i className="fas fa-brain"></i>
-              <h3>Neurología</h3>
-              <p>Diagnóstico y tratamiento de enfermedades del sistema nervioso.</p>
-            </div>
-            <div className="service-card">
-              <i className="fas fa-baby"></i>
-              <h3>Pediatría</h3>
-              <p>Cuidado especializado para la salud de sus hijos.</p>
-            </div>
-            <div className="service-card">
-              <i className="fas fa-bone"></i>
-              <h3>Ortopedia</h3>
-              <p>Tratamiento de lesiones y enfermedades del sistema musculoesquelético.</p>
-            </div>
-            <div className="service-card">
-              <i className="fas fa-eye"></i>
-              <h3>Oftalmología</h3>
-              <p>Cuidado integral de la visión y salud ocular.</p>
-            </div>
-            <div className="service-card">
-              <i className="fas fa-tooth"></i>
-              <h3>Odontología</h3>
-              <p>Servicios dentales completos para toda la familia.</p>
-            </div>
+            {servicios.map((servicio) => (
+              <article key={servicio.titulo} className="service-card">
+                <i className={`${servicio.icon} service-icon`}></i>
+                <h3>{servicio.titulo}</h3>
+                <p>{servicio.descripcion}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section id="testimonios" className="testimonials-section">
         <div className="container">
           <div className="section-header">
             <h2>Testimonios de Nuestros Pacientes</h2>
-            <p>Lo que nuestros pacientes dicen sobre nuestra atención</p>
+            <p>Historias reales de confianza y buenos resultados.</p>
           </div>
           <div className="testimonials-container">
-            {/* Aquí puedes mapear testimonios desde un array o API */}
+            {testimonios.map((testimonio) => (
+              <article key={testimonio.nombre} className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>{testimonio.texto}</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="author-avatar" aria-hidden>{testimonio.nombre.charAt(0)}</div>
+                  <div className="author-info">
+                    <h4>{testimonio.nombre}</h4>
+                    <p>{testimonio.detalle}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contacto" className="contact-section">
         <div className="container">
           <div className="section-header">
-            <h2>Contáctenos</h2>
-            <p>Estamos aquí para responder sus preguntas</p>
+            <h2>Contáctanos</h2>
+            <p>Estamos listos para ayudarte a programar tu próxima consulta.</p>
           </div>
           <div className="contact-content">
             <div className="contact-info">
               <div className="contact-item">
-                <i className="fas fa-map-marker-alt"></i>
+                <i className="fas fa-map-marker-alt icon"></i>
                 <div>
                   <h3>Dirección</h3>
                   <p>2507 Beverley Rd Brooklyn, Nueva York 11794 Estados Unidos.</p>
                 </div>
               </div>
               <div className="contact-item">
-                <i className="fas fa-phone"></i>
+                <i className="fas fa-phone-alt icon"></i>
                 <div>
                   <h3>Teléfono</h3>
                   <p>+1 (555) 123-4567</p>
                 </div>
               </div>
               <div className="contact-item">
-                <i className="fas fa-envelope"></i>
+                <i className="fas fa-envelope icon"></i>
                 <div>
                   <h3>Email</h3>
                   <p>info@medicare.com</p>
                 </div>
               </div>
               <div className="contact-item">
-                <i className="fas fa-clock"></i>
+                <i className="fas fa-calendar-alt icon"></i>
                 <div>
                   <h3>Horario</h3>
                   <p>Lunes - Viernes 8:00 - 19:00 hrs</p>
@@ -232,12 +249,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Botón de WhatsApp Flotante */}
-      <a href="https://wa.me/15551234567?text=Hola,%20me%20gustaría%20agendar%20una%20cita" className="whatsapp-float" target="_blank">
+      <a
+        href="https://wa.me/15551234567?text=Hola,%20me%20gustaría%20agendar%20una%20cita"
+        className="whatsapp-float"
+        target="_blank"
+      >
         <i className="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
       </a>
-
-      <Footer />
     </>
   );
 }

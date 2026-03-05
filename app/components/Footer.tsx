@@ -6,12 +6,12 @@ const Footer = () => (
       <div className="footer-content">
         <div className="footer-section">
           <h3>MediCare</h3>
-          <p>Su salud es nuestra prioridad. Brindamos atención médica de calidad para toda la familia.</p>
+          <p>Tu salud es nuestra prioridad. Atención médica de calidad para toda la familia.</p>
           <div className="social-links">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
           </div>
         </div>
         <div className="footer-section">
@@ -27,19 +27,19 @@ const Footer = () => (
         <div className="footer-section">
           <h3>Servicios</h3>
           <ul>
-            <li><a href="#">Cardiología</a></li>
-            <li><a href="#">Neurología</a></li>
-            <li><a href="#">Pediatría</a></li>
-            <li><a href="#">Ortopedia</a></li>
-            <li><a href="#">Emergencias</a></li>
+            <li><a href="#servicios">Cardiología</a></li>
+            <li><a href="#servicios">Neurología</a></li>
+            <li><a href="#servicios">Pediatría</a></li>
+            <li><a href="#servicios">Ortopedia</a></li>
+            <li><a href="#servicios">Emergencias</a></li>
           </ul>
         </div>
         <div className="footer-section">
           <h3>Contacto</h3>
-          <ul>
-            <li><i className="fas fa-map-marker-alt"></i> Brooklyn, Nueva York</li>
-            <li><i className="fas fa-phone"></i> +1 (555) 123-4567</li>
-            <li><i className="fas fa-envelope"></i> info@medicare.com</li>
+          <ul className="footer-contact-list">
+            <li><i className="fas fa-map-marker-alt icon"></i> Brooklyn, Nueva York</li>
+            <li><i className="fas fa-phone-alt icon"></i> +1 (555) 123-4567</li>
+            <li><i className="fas fa-envelope icon"></i> info@medicare.com</li>
           </ul>
         </div>
       </div>

@@ -4,7 +4,7 @@ const Navbar = () => (
   <nav className="navbar">
     <div className="nav-container">
       <div className="nav-logo">
-        <i className="fas fa-heartbeat"></i>
+        <i className="fas fa-heartbeat icon"></i>
         <span>MediCare</span>
       </div>
       <ul className="nav-menu">
@@ -15,7 +15,7 @@ const Navbar = () => (
         <li><a href="#testimonios" className="nav-link">Testimonios</a></li>
         <li><a href="#contacto" className="nav-link">Contacto</a></li>
       </ul>
-      <div className="nav-toggle">
+      <div className="nav-toggle" aria-hidden>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
