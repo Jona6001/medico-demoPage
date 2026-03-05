@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <section id="inicio" className="hero-section">
         <picture className="hero-bg">
           <source media="(min-width: 768px)" srcSet="/images/hero_desktop.webp" type="image/webp" />
-          <img src="/images/hero_mobile.webp" alt="Atención médica familiar en clínica moderna" loading="lazy" />
+          <Image src="/images/hero_mobile.webp" alt="Atención médica familiar en clínica moderna" width={400} height={300} priority />
         </picture>
         <div className="hero-container">
           <div className="hero-content">
@@ -66,7 +67,7 @@ export default function Home() {
         <div className="container">
           <div className="about-content">
             <div className="about-image">
-              <img src="/images/about.webp" alt="Sobre Nuestra Clínica" />
+              <Image src="/images/about.webp" alt="Sobre Nuestra Clínica" width={500} height={350} />
             </div>
             <div className="about-text">
               <h2>Sobre Nuestra Clínica</h2>

@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "True Healthcare For Your Family",
-  description: "Clínica médica familiar - MediCare",
+  title: "Consultario Medico ",
+  description: "Clinica moderna atencion medica familiar, exámenes, recetas, cardiología y más. Prioridad en salud y bienestar. Contacta para emergencias, horarios y ubicación.",
 };
 
 export default function RootLayout({
