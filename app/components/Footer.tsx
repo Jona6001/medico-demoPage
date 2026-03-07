@@ -38,7 +38,7 @@ const Footer = () => (
           <h3>Contacto</h3>
           <ul className="footer-contact-list">
             <li><i className="fas fa-map-marker-alt icon"></i> Durango, Durango</li>
-            <li><i className="fas fa-phone-alt icon"></i> +1 (555) 123-4567</li>
+            <li><i className="fas fa-phone-alt icon"></i> +55 (618) 123-4567</li>
             <li><i className="fas fa-envelope icon"></i> info@medicare.com</li>
           </ul>
         </div>
