@@ -265,16 +265,24 @@ body {
 }
 
 .card-icon {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  opacity: 0.95;
   width: 62px;
   height: 62px;
   border-radius: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  padding: 14px;
+  line-height: 2;
+  font-size: 0;
+  opacity: 0.95;
   background: rgba(255, 255, 255, 0.18);
+}
+
+.card-icon::before {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
 }
 
 .card h3 {

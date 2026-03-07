@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Consultario Medico ",
-  description: "Clinica moderna atencion medica familiar, exámenes, recetas, cardiología y más. Prioridad en salud y bienestar. Contacta para emergencias, horarios y ubicación.",
+  title: "Consultorio Médico DEMO",
+  description: "Clínica moderna atención médica familiar, exámenes, recetas, cardiología y más. Prioridad en salud y bienestar. Contacta para emergencias, horarios y ubicación.",
 };
 
 export default function RootLayout({
