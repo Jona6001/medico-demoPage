@@ -6,6 +6,9 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "Consultorio Médico DEMO",
   description: "Clínica moderna atención médica familiar, exámenes, recetas, cardiología y más. Prioridad en salud y bienestar. Contacta para emergencias, horarios y ubicación.",
+  verification: {
+    google: "dhDeI5mJJwZ4FCyJB4c2n5mB9a6ODko_NQLAfAxdMEw",
+  },
 };
 
 export default function RootLayout({
